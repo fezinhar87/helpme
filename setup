@@ -1,0 +1,84 @@
+{
+  "name": "shelpme",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "uiIuj",
+  "actions": [
+    {
+      "roleName": "Voice Helper",
+      "hoist": "true",
+      "mentionable": "true",
+      "color": "RANDOM",
+      "position": "5",
+      "storage": "1",
+      "varName": "helper.created",
+      "name": "Create Role"
+    },
+    {
+      "role": "3",
+      "varName": "helper.created",
+      "permission": "29",
+      "state": "0",
+      "reason": "needed",
+      "name": "Set Role Permissions"
+    },
+    {
+      "channelName": "Voice help",
+      "categoryID": "",
+      "topic": "",
+      "position": "",
+      "storage": "1",
+      "varName": "helpfunded",
+      "name": "Create Text Channel"
+    },
+    {
+      "channelName": "looking for help #1",
+      "categoryID": "",
+      "bitrate": "",
+      "userLimit": "1",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Voice Channel"
+    },
+    {
+      "channelName": "looking for help #2",
+      "categoryID": "",
+      "bitrate": "",
+      "userLimit": "1",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Voice Channel"
+    },
+    {
+      "channelName": "looking for help #3",
+      "categoryID": "",
+      "bitrate": "",
+      "userLimit": "1",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Voice Channel"
+    },
+    {
+      "channelName": "looking for help #4",
+      "categoryID": "",
+      "bitrate": "",
+      "userLimit": "1",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Voice Channel"
+    },
+    {
+      "channel": "5",
+      "varName": "helpfunded",
+      "message": "${member} i have created some roles and channels so check them out\n",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}

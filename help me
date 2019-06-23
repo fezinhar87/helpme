@@ -1,0 +1,92 @@
+{
+  "name": "helpme",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "uiIuj",
+  "actions": [
+    {
+      "message": "0",
+      "value": "1800",
+      "whattodo": "0",
+      "call": "7",
+      "storage": "1",
+      "varName": "time-left",
+      "source": "uiIuj",
+      "name": "Set Time Restriction"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "19",
+      "storage": "1",
+      "varName2": "memvc",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "name": "Check If Member"
+    },
+    {
+      "info": "1",
+      "find": "Voice Helper",
+      "storage": "1",
+      "varName": "helper.found",
+      "name": "Find Role"
+    },
+    {
+      "channel": "5",
+      "varName": "voice help found",
+      "message": "hey ${tempVars(\"helper.found\")}\n${member} has reqsted help he is in the voice channel ${tempVars(\"memvc\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "time": "${tempVars(\"time-left\")}",
+      "storage": "1",
+      "varName": "time-left-convert",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "you alreay done this command in the last 30 minutes\nplease wait:${tempVars(\"time-left-convert\")} minutes",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "pre",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "you are not in a voice channel please join one of the channels:\nlooking for help #1-4\nif there all in use please notify an admin by doing ${tempVars(\"pre\")}notify",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "notify",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ZSowq",
+  "actions": [
+    {
+      "message": "0",
+      "value": "1800",
+      "whattodo": "0",
+      "call": "4",
+      "storage": "1",
+      "varName": "time-left",
+      "source": "ZSowq",
+      "name": "Set Time Restriction"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "hey user we have sent a notifction to an admin thanks",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "time": "${tempVars(\"time-left\")}",
+      "storage": "1",
+      "varName": "time-left-convert",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "hey you already notifyed an admin in the last 30 minutes\nplease wait:${tempVars(\"time-left-convert\")} minutes\n",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}

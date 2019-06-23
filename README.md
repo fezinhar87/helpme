@@ -1,7 +1,6 @@
 
 # helpme command by tired#1379
 
-One Paragraph of project description goes here
 
 ## seting up
 
